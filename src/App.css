@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sonsie+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: "#1c1c1c";
+  background-color: #ffffff;
+  font-family: "Inter Tight", sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Nohemi-Bold';
+  src: url('/Nohemi-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title {
+  font-family: 'Nohemi-Bold', "Inter Tight", system-ui, sans-serif;
+}
+
+.bs {
+  box-shadow: (136, 136, 136, 0.1) 1px 1px 1px 0px;
+}
