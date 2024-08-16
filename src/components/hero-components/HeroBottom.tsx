@@ -34,9 +34,6 @@ const HeroBottom:React.FC<HeroBottomProps> = () => {
               <a href="" className="py-1 px-4 rounded-full ">
                 Projects
               </a>
-              <a href="" className="py-1 px-4 rounded-full mr-1 ">
-                Skills
-              </a>
               <a href="" className="bg-black py-1 px-4 text-white rounded-full flex items-center gap-2">
                 Contact
                 <span className='bg-white text-black rounded-full p-[1px] '><GoArrowDownRight/></span>

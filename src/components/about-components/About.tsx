@@ -54,8 +54,8 @@ const Bio: React.FC = () => {
 
 const Education: React.FC = () => {
   return (
-    <div className="w-full px-4 py-6 rounded-xl flex gap-16 ">
-      <div className="">
+    <div className="w-full px-4 py-6 rounded-xl flex  ">
+      <div className="w-1/2 pr-2">
         <p className="font-medium flex flex-wrap items-center text-lg">
           <img src="/icons/uf.png" alt="" className="max-w-8 mr-0.5" />
           University of Florida College of Engineering
@@ -66,7 +66,7 @@ const Education: React.FC = () => {
           In Progress
         </p>
       </div>
-      <div className="">
+      <div className="w-1/2 pl-2">
         <p className="font-medium flex flex-wrap items-center text-lg">
           <img src="/icons/uf.png" alt="" className="max-w-8 mr-0.5" />
           University of Florida College of Business
@@ -83,7 +83,7 @@ const Education: React.FC = () => {
 
 const EducationTab = () => {
   return (
-    <h5 className="font-[350]">Education</h5>
+    <h5 className="font-[350] pt-6">Education</h5>
   )
 }
 

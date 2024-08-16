@@ -5,6 +5,8 @@ import HeroBottom from "./components/hero-components/HeroBottom";
 import HeroCenter from "./components/hero-components/HeroCenter";
 import About from "./components/about-components/About";
 import Projects from "./components/project-components/Projects";
+import Contact from "./components/contact-components/Contact";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -24,7 +26,10 @@ function App() {
           <Projects/>
         </div>
       </div>
-      <div className="h-screen"></div>
+      <div className="px-16 relative  py-12 rounded-2xl mt-8">
+        <Contact/>
+      </div>
+      <Footer/>
     </>
   );
 }
