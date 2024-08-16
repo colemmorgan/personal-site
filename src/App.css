@@ -21,10 +21,17 @@ body {
   font-style: normal;
 }
 
-.title {
+.nohemi {
   font-family: 'Nohemi-Bold', "Inter Tight", system-ui, sans-serif;
 }
 
 .bs {
   box-shadow: (136, 136, 136, 0.1) 1px 1px 1px 0px;
+}
+
+.custom {
+  background: linear-gradient(45deg, #08203e,#557c93);
+}
+.custom2 {
+  background: linear-gradient(45deg, #0e1c26,#2a454b,#294861);
 }

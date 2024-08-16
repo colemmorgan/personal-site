@@ -3,8 +3,9 @@ import "./App.css";
 import Nav from "./components/hero-components/Nav";
 import HeroBottom from "./components/hero-components/HeroBottom";
 import HeroCenter from "./components/hero-components/HeroCenter";
-import Scene from "./components/WobbleSphere";
-import Skills from "./components/about-components/Skills";
+import About from "./components/about-components/About";
+import Projects from "./components/project-components/Projects";
+
 function App() {
   return (
     <>
@@ -16,15 +17,14 @@ function App() {
         </div>
       </div>
       <div className="py-12 px-16 relative">
-        <div className="flex h-screen mx-auto max-w-[1680px]">
-          <div className="w-[23%]">
-            <h3 className="font-medium text-3xl">About Me</h3>
-          </div>
-          <div className="w-[77%] px-4">
-           <Skills/>
-          </div>
+        <About />
+      </div>
+      <div className="px-16 relative">
+        <div className="bg-[#fcfbfd] py-12 rounded-2xl mt-8">
+          <Projects/>
         </div>
       </div>
+      <div className="h-screen"></div>
     </>
   );
 }

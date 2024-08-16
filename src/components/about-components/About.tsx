@@ -1,21 +1,60 @@
 import React from "react";
+import SplitContainer from "./SplitContainer";
 
-type SkillsProps = {};
+type AboutProps = {};
 
-const Skills: React.FC<SkillsProps> = () => {
+const About: React.FC<AboutProps> = () => {
   return (
-    <div className="max-w-[1600px]">
-      <Frontend />
-      <Backend />
-      <Education />
+    <>
+    <SplitContainer left={<BioTab/>} right={<Bio/>}/>
+    <SplitContainer left={<SkillsTab/>} right={<Skills/>}/>
+    <SplitContainer left={<EducationTab/>} right={<Education/>}/>
+    </>
+    
+    
+    
+  );
+};
+export default About;
+
+const BioTab: React.FC = () => {
+    return (
+        <h3 className="font-medium text-3xl pt-4">About Me</h3>
+    )
+}
+
+const Bio: React.FC = () => {
+  return (
+    <div className="w-full px-4 py-6 mb-6">
+      <p className="text-xl font-semibold">
+        I am a fullstack web developer that creates beautiful interfaces and
+        blazingly fast backends.{" "}
+        <span className="font-normal">
+          My passion lies in front-end design, where I focus on creating
+          interfaces that flow effortlessly and engage users.
+        </span>
+      </p>
+      <div className="flex mt-10">
+        <div className="w-1/3 pr-3">
+          <p className="text-4xl nohemi">263</p>
+          <p className="mt-1.5 font-light">Github Contributions in 2024</p>
+        </div>
+        <div className="w-1/3 pr-3">
+          <p className="text-4xl nohemi">3x</p>
+          <p className="mt-1.5 font-light">Hackathon Winner</p>
+        </div>
+        <div className="w-1/3">
+          <p className="text-4xl nohemi">1000s</p>
+          <p className="mt-1.5 font-light">Hours Spent Coding</p>
+        </div>
+      </div>
     </div>
   );
 };
-export default Skills;
 
 const Education: React.FC = () => {
   return (
-    <div className="w-full px-4 py-6 bs rounded-xl flex gap-16 ">
+    <div className="w-full px-4 py-6 rounded-xl flex gap-16 ">
       <div className="">
         <p className="font-medium flex flex-wrap items-center text-lg">
           <img src="/icons/uf.png" alt="" className="max-w-8 mr-0.5" />
@@ -42,11 +81,17 @@ const Education: React.FC = () => {
   );
 };
 
+const EducationTab = () => {
+  return (
+    <h5 className="font-[350]">Education</h5>
+  )
+}
+
 const Frontend: React.FC = () => {
   return (
     <div className="w-full border border-[#ebeaee] px-4 py-6 bs rounded-xl mb-6">
-      <p className="font-medium">Frontend Developement</p>
-      <p className="flex font-[350] text-sm mt-2.5 mb-4">
+      <p className="font-medium text-lg">Frontend Developement</p>
+      <p className="flex font-[350]  mt-2.5 mb-4">
         Responsive Design • Creative Development • JS Frameworks • Web
         Animations • Semantic Programming • Cross-Browser Testing •
         Accessability Standards
@@ -69,7 +114,7 @@ const Frontend: React.FC = () => {
           Tailwind CSS
         </p>
         <p className="flex items-center gap-1.5 text-sm font-[350] ">
-          <img src="/icons/figma.svg" alt="" className="max-w-4" />
+          <img src="/icons/figma.svg" alt="" className="max-w-3.5" />
           Figma
         </p>
         <p className="flex items-center gap-1.5 text-sm font-[350] ">
@@ -84,8 +129,8 @@ const Frontend: React.FC = () => {
 const Backend: React.FC = () => {
   return (
     <div className="w-full border border-[#ebeaee] px-4 py-6 bs rounded-xl mb-8">
-      <p className="font-medium">Backend Developement</p>
-      <p className="flex font-[350] text-sm mt-2.5 mb-4">
+      <p className="font-medium text-lg">Backend Developement</p>
+      <p className="flex font-[350]  mt-2.5 mb-4">
         Database Management • Web Scraping • Data Structures and Algorithms •
         Containerization • RESTful API • Authentication • Server-side Logic
       </p>
@@ -118,3 +163,18 @@ const Backend: React.FC = () => {
     </div>
   );
 };
+
+const SkillsTab: React.FC = () => {
+  return (
+    <h5 className="font-[350]">Skills</h5>
+  )
+}
+
+const Skills: React.FC = () => {
+  return (
+    <>
+    <Frontend/>
+    <Backend/>
+    </>
+  )
+}
