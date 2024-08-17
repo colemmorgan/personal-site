@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SignatureAnimated from "../ui/SignatureAnimated";
+import SignatureAnimated from "../motion-components/SignatureAnimated";
 import { AnimatePresence, motion } from "framer-motion";
 import Scene from "../WobbleSphere";
 

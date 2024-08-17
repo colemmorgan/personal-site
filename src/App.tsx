@@ -6,7 +6,7 @@ import HeroCenter from "./components/hero-components/HeroCenter";
 import About from "./components/about-components/About";
 import Projects from "./components/project-components/Projects";
 import Contact from "./components/contact-components/Contact";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,18 +18,10 @@ function App() {
           <HeroBottom />
         </div>
       </div>
-      <div className="py-12 px-16 relative">
-        <About />
-      </div>
-      <div className="px-16 relative">
-        <div className="bg-[#fcfbfd] py-12 rounded-2xl mt-8">
-          <Projects/>
-        </div>
-      </div>
-      <div className="px-16 relative  py-12 rounded-2xl mt-8">
-        <Contact/>
-      </div>
-      <Footer/>
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }

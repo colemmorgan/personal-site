@@ -1,31 +1,62 @@
 import React from "react";
 import SplitContainer from "../about-components/SplitContainer";
-import { MdOutlineArrowOutward } from "react-icons/md";
+import AnimatedProjectReveal from "../motion-components/AnimatedProjectReveal";
+import HackathonProject from "./HackathonProject";
 
 type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <>
-      <SplitContainer left={<ProjectsTab />} right={<Featured />} />
-    </>
+    <div className="px-16 relative" id="projects">
+      <div className="bg-[#fcfbfd] py-12 rounded-2xl mt-8">
+        <SplitContainer left={<ProjectsTab />} right={<Featured />} />
+      </div>
+    </div>
   );
 };
 
 export default Projects;
 
 const ProjectsTab: React.FC = () => {
-  return <h2 className="text-3xl font-medium sticky top-6">Projects</h2>;
+  return <h2 className="text-3xl font-medium ">Projects</h2>;
 };
 
 const Featured: React.FC = () => {
+  const hackathonProjects = [
+    {
+      title: "Fulfillment",
+      desc: "A medical microcredentialing app that features real time player versus player trivia, offline courses, and notecard sets users can share/create.",
+      github: "https://github.com/colemmorgan/Medihacks2024",
+      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
+      live: "https://fufillment-n5cn.vercel.app/",
+    },
+    {
+      title: "Access For All",
+      desc: "A website designed to check and the display the accessability of various sites for the University of Florida. Also features a forum for extra communication.",
+      github: "https://github.com/colemmorgan/Medihacks2024",
+      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
+    },
+    {
+      title: "Chroma",
+      desc: "A tool designed to adjust the colors of images so that colorblind users can experience heightened color differentiation.",
+      github: "https://github.com/colemmorgan/Chroma",
+      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
+      live: "https://chroma-nu.vercel.app/",
+    },
+  ];
+
   return (
     <>
       <div className="flex flex-wrap gap-y-12 mb-16">
         <div className="px-4 w-1/2">
-          <div className=" flex flex-col items-center px-2 rounded-lg py-4 custom ">
-            <img src="/yes.png" alt="" className=" w-1/2 rounded-md" />
-          </div>
+          <AnimatedProjectReveal>
+            <img
+              src="/codecode.png"
+              alt=""
+              className=" w-1/2 rounded-md"
+              loading="lazy"
+            />
+          </AnimatedProjectReveal>
           <p className="mt-4 text-xl font-semibold">
             CodeCode{" "}
             <span className="font-normal">/ Coding Question Platform</span>
@@ -37,9 +68,14 @@ const Featured: React.FC = () => {
           </p>
         </div>
         <div className="px-4 w-1/2">
-          <div className=" flex flex-col items-center px-2 rounded-lg py-4 custom ">
-            <img src="/yes.png" alt="" className=" w-1/2 rounded-md" />
-          </div>
+          <AnimatedProjectReveal>
+            <img
+              src="/coming-soon.svg"
+              alt=""
+              className=" w-1/2 rounded-md"
+              loading="lazy"
+            />
+          </AnimatedProjectReveal>
           <p className="mt-4 text-xl font-semibold">
             CodeCode{" "}
             <span className="font-normal">/ Coding Question Platform</span>
@@ -51,9 +87,14 @@ const Featured: React.FC = () => {
           </p>
         </div>
         <div className="px-4 w-1/2">
-          <div className=" flex flex-col items-center px-2 rounded-lg py-4 custom ">
-            <img src="/yes.png" alt="" className=" w-1/2 rounded-md" />
-          </div>
+          <AnimatedProjectReveal>
+            <img
+              src="/coming-soon.svg"
+              alt=""
+              className=" w-1/2 rounded-md"
+              loading="lazy"
+            />
+          </AnimatedProjectReveal>
           <p className="mt-4 text-xl font-semibold">
             CodeCode{" "}
             <span className="font-normal">/ Coding Question Platform</span>
@@ -65,9 +106,14 @@ const Featured: React.FC = () => {
           </p>
         </div>
         <div className="px-4 w-1/2">
-          <div className=" flex flex-col items-center px-2 rounded-lg py-4 custom ">
-            <img src="/yes.png" alt="" className=" w-1/2 rounded-md" />
-          </div>
+          <AnimatedProjectReveal>
+            <img
+              src="/coming-soon.svg"
+              alt=""
+              className=" w-1/2 rounded-md"
+              loading="lazy"
+            />
+          </AnimatedProjectReveal>
           <p className="mt-4 text-xl font-semibold">
             CodeCode{" "}
             <span className="font-normal">/ Coding Question Platform</span>
@@ -86,34 +132,14 @@ const Featured: React.FC = () => {
             3
           </span>
         </div>
-        <HackathonProject />
-        <HackathonProject />
-        <HackathonProject />
+        {
+          hackathonProjects.map((project, i) => (
+            <HackathonProject title={project.title} desc={project.desc} github={project.github} live={project.live} video={project?.video} key={project.title} index={i}/>
+          ))
+        }
       </div>
     </>
   );
 };
 
 // 460x360 #fcfbfd
-
-const HackathonProject: React.FC = () => {
-  return (
-    <div className="grid grid-cols-12 w-full border-b border-gray-200">
-      <p className="col-span-2  p-2 pl-0 flex gap-1 items-center">
-        Fulfillment{" "}
-        <span className="text-gray-400">
-          <MdOutlineArrowOutward />
-        </span>
-      </p>
-      <p className="col-span-7  p-2 text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni possimus
-        asperiores omnis modi, placeat in fuga pariatur? Vel, quisquam beatae.
-      </p>
-      <div className="col-span-3  py-2 px-1 h-full flex items-center gap-4 font-[350]">
-        <a href="" className="flex items-center gap-1 text-sm underline">Github</a>
-        <a href="" className="flex items-center gap-1 text-sm underline">Video Demo</a>
-        <a href="" className="flex items-center gap-1 text-sm underline">Live Site</a>
-      </div>
-    </div>
-  );
-};

@@ -13,6 +13,10 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 
 @font-face {
   font-family: 'Nohemi-Bold';
