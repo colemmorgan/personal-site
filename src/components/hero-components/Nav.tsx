@@ -9,7 +9,7 @@ type NavProps = {
 const Nav:React.FC<NavProps> = () => {
     
     return (
-        <nav className="h-[15%] flex justify-between  py-6 px-14">
+        <nav className="h-[15%] flex justify-between  py-6 px-12">
             <div className="">
               <p className="text-lg font-medium">Cole Morgan</p>
               <p className="text-sm flex items-center gap-1">
@@ -20,7 +20,7 @@ const Nav:React.FC<NavProps> = () => {
               </p>
             </div>
             <div>
-              <img src="/favicon.svg" alt="" className="max-w-10" />
+              <img src="/favicon.svg" alt="" className="max-w-9" />
             </div>
             <div className="flex gap-6 text-sm items-center h-fit ">
               <p>Resume</p>

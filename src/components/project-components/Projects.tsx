@@ -1,7 +1,7 @@
 import React from "react";
 import SplitContainer from "../about-components/SplitContainer";
-import AnimatedProjectReveal from "../motion-components/AnimatedProjectReveal";
-import HackathonProject from "./HackathonProject";
+import Project from "./Project";
+import HackathonProjects from "./HackathonProjects";
 
 type ProjectsProps = {};
 
@@ -22,121 +22,50 @@ const ProjectsTab: React.FC = () => {
 };
 
 const Featured: React.FC = () => {
-  const hackathonProjects = [
+  
+
+  const projects = [
     {
-      title: "Fulfillment",
-      desc: "A medical microcredentialing app that features real time player versus player trivia, offline courses, and notecard sets users can share/create.",
-      github: "https://github.com/colemmorgan/Medihacks2024",
-      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
-      live: "https://fufillment-n5cn.vercel.app/",
+      title: "CodeCode",
+      subtitle: "Coding Question Platform",
+      desc: "Practice Coding questions graded in real time with a dockerized coding execution engine. Continue where you left off anytime with Firebase Auth.",
+      img: "/codecode.png",
     },
     {
-      title: "Access For All",
-      desc: "A website designed to check and the display the accessability of various sites for the University of Florida. Also features a forum for extra communication.",
-      github: "https://github.com/colemmorgan/Medihacks2024",
-      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
+      title: "Replayed",
+      subtitle: "Video Game Performance Analyzer",
+      desc: "Track and analyze your gaming performance by accessing a plethora of statistics from public apis and user uploaded files. Access your information anywhere with an Express/MongoDB backend.",
+      img: "/replayed-thumbnail.png",
     },
-    {
-      title: "Chroma",
-      desc: "A tool designed to adjust the colors of images so that colorblind users can experience heightened color differentiation.",
-      github: "https://github.com/colemmorgan/Chroma",
-      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
-      live: "https://chroma-nu.vercel.app/",
-    },
+    // {
+    //   title: "CodeCode",
+    //   subtitle: "Coding Question Platform",
+    //   desc: "Practice Coding questions graded in real time with a dockerized coding execution engine. Continue where you left off anytime with Firebase Auth.",
+    //   img: "/codecode.png",
+    // },
+    // {
+    //   title: "CodeCode",
+    //   subtitle: "Coding Question Platform",
+    //   desc: "Practice Coding questions graded in real time with a dockerized coding execution engine. Continue where you left off anytime with Firebase Auth.",
+    //   img: "/codecode.png",
+    // },
   ];
 
   return (
     <>
-      <div className="flex flex-wrap gap-y-12 mb-16">
-        <div className="px-4 w-1/2">
-          <AnimatedProjectReveal>
-            <img
-              src="/codecode.png"
-              alt=""
-              className=" w-1/2 rounded-md"
-              loading="lazy"
-            />
-          </AnimatedProjectReveal>
-          <p className="mt-4 text-xl font-semibold">
-            CodeCode{" "}
-            <span className="font-normal">/ Coding Question Platform</span>
-          </p>
-          <p className="mt-1 font-[350]">
-            Practice Coding questions graded in real time with a dockerized
-            coding execution engine. Continue where you left off anytime with
-            Firebase Auth.
-          </p>
-        </div>
-        <div className="px-4 w-1/2">
-          <AnimatedProjectReveal>
-            <img
-              src="/coming-soon.svg"
-              alt=""
-              className=" w-1/2 rounded-md"
-              loading="lazy"
-            />
-          </AnimatedProjectReveal>
-          <p className="mt-4 text-xl font-semibold">
-            CodeCode{" "}
-            <span className="font-normal">/ Coding Question Platform</span>
-          </p>
-          <p className="mt-1 font-[350]">
-            Practice Coding questions graded in real time with a dockerized
-            coding execution engine. Continue where you left off anytime with
-            Firebase Auth.
-          </p>
-        </div>
-        <div className="px-4 w-1/2">
-          <AnimatedProjectReveal>
-            <img
-              src="/coming-soon.svg"
-              alt=""
-              className=" w-1/2 rounded-md"
-              loading="lazy"
-            />
-          </AnimatedProjectReveal>
-          <p className="mt-4 text-xl font-semibold">
-            CodeCode{" "}
-            <span className="font-normal">/ Coding Question Platform</span>
-          </p>
-          <p className="mt-1 font-[350]">
-            Practice Coding questions graded in real time with a dockerized
-            coding execution engine. Continue where you left off anytime with
-            Firebase Auth.
-          </p>
-        </div>
-        <div className="px-4 w-1/2">
-          <AnimatedProjectReveal>
-            <img
-              src="/coming-soon.svg"
-              alt=""
-              className=" w-1/2 rounded-md"
-              loading="lazy"
-            />
-          </AnimatedProjectReveal>
-          <p className="mt-4 text-xl font-semibold">
-            CodeCode{" "}
-            <span className="font-normal">/ Coding Question Platform</span>
-          </p>
-          <p className="mt-1 font-[350]">
-            Practice Coding questions graded in real time with a dockerized
-            coding execution engine. Continue where you left off anytime with
-            Firebase Auth.
-          </p>
-        </div>
+      <div className="flex justify-between flex-wrap gap-y-12 mb-16">
+        {projects.map((project, index) => (
+          <Project project={project} index={index} />
+        ))}
       </div>
-      <div className="px-4">
+      <div className="">
         <div className="flex items-center gap-2 mb-4">
           <h3 className="text-lg font-medium ">Hackathon Projects </h3>
           <span className="bg-gray-200 rounded-full text-sm w-6 h-6 flex items-center justify-center">
             3
           </span>
         </div>
-        {
-          hackathonProjects.map((project, i) => (
-            <HackathonProject title={project.title} desc={project.desc} github={project.github} live={project.live} video={project?.video} key={project.title} index={i}/>
-          ))
-        }
+        <HackathonProjects/>
       </div>
     </>
   );

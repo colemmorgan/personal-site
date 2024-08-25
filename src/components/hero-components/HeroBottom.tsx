@@ -10,11 +10,11 @@ type HeroBottomProps = {
 const HeroBottom:React.FC<HeroBottomProps> = () => {
     
     return (
-        <div className="h-[15%] flex justify-between items-end pl-14">
+        <div className="h-[15%] flex justify-between items-end pl-12">
             <div className="max-w-[170px]  pb-6">
-              <p className="text-sm leading-relaxed mb-4 pl-1 text-[#64606f]">
+              {/* <p className="text-sm leading-relaxed mb-4 pl-1 text-[#64606f]">
                 Feel feel to reach out to me or check my socials!
-              </p>
+              </p> */}
               <ul className="flex gap-5 text-lg text-[#404040]">
                 <a className="bg-white p-2.5 rounded-full cursor-pointer" href='https://www.linkedin.com/in/cole-morgan-748045253/' target='_blank'>
                   <FaGithub />

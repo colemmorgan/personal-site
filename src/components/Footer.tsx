@@ -9,10 +9,10 @@ const Footer: React.FC<footerProps> = () => {
         <div className="flex justify-between items-end">
           <p className="font-medium text-xl">Cole Morgan</p>
           <ul className="flex gap-8 text-sm">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
             <a href="">Resume</a>
           </ul>
         </div>

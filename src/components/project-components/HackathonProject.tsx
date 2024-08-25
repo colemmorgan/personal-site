@@ -1,5 +1,4 @@
-import { useInView, motion } from "framer-motion";
-import { useRef } from "react";
+import {  motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 type HackathonProjectProps = {
@@ -8,7 +7,8 @@ type HackathonProjectProps = {
   github: string;
   video: string;
   live?: string;
-  index: number
+  index: number,
+  isInView: boolean
 };
 
 const HackathonProject: React.FC<HackathonProjectProps> = ({
@@ -17,17 +17,17 @@ const HackathonProject: React.FC<HackathonProjectProps> = ({
   github,
   video,
   live,
-  index
+  index,
+  isInView
 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
 
   return (
-    <div ref={ref} className="border-b border-gray-200 overflow-hidden">
+    <div className="border-b border-gray-200 overflow-hidden">
       <motion.div className="grid grid-cols-12 w-full "
       initial={{y:60}}
       animate={isInView ? { y: 0 } : { y: 60}}
-      transition={{duration: 0.4, ease: "easeInOut", delay: 0.2 * index}}>
+      transition={{duration: 0.4, ease: "easeInOut", delay: 0.18 * index}}>
         
      
         <p className="col-span-2  p-2 pl-0 flex gap-1 items-center">

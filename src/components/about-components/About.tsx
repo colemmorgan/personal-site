@@ -22,9 +22,9 @@ const BioTab: React.FC = () => {
 
 const Bio: React.FC = () => {
   return (
-    <div className="w-full px-4 py-6 mb-6">
+    <div className="w-full py-6 mb-6">
       <p className="text-xl font-semibold">
-        I am a fullstack web developer that creates beautiful interfaces and
+        I am a fullstack web developer that creates <span className="text-gradient">beautiful interfaces</span> and
         blazingly fast backends.{" "}
         <span className="font-normal">
           My passion lies in front-end design, where I focus on creating
@@ -58,7 +58,7 @@ const Bio: React.FC = () => {
 const Education: React.FC = () => {
   return (
     <AnimatedFadeUp>
-      <div className="w-full px-4 py-6 rounded-xl flex  ">
+      <div className="w-full py-6 rounded-xl flex">
         <div className="w-1/2 pr-2">
           <p className="font-medium flex flex-wrap items-center text-lg">
             <img src="/icons/uf.png" alt="" className="max-w-8 mr-0.5" />
