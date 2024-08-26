@@ -9,7 +9,7 @@ type NavProps = {
 const Nav:React.FC<NavProps> = () => {
     
     return (
-        <nav className="h-[15%] flex justify-between  py-6 px-12">
+        <nav className="h-[15%] flex justify-between  py-6 px-6 lg:px-12">
             <div className="">
               <p className="text-lg font-medium">Cole Morgan</p>
               <p className="text-sm flex items-center gap-1">

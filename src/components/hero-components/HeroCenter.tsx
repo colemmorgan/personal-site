@@ -33,7 +33,7 @@ const HeroCenter: React.FC<HeroCenterProps> = () => {
       </AnimatePresence>
       {!animating && (
         <>
-          <div className="max-w-[750px] text-[56px] leading-[1.125] text-center mb-4 overflow-hidden relative z-10 nohemi">
+          <div className="max-w-[750px] text-5xl lg:text-[56px] leading-[1.125] text-center mb-4 overflow-hidden relative z-10 nohemi">
             <motion.p
               initial={{ y: 180, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -42,7 +42,7 @@ const HeroCenter: React.FC<HeroCenterProps> = () => {
               Web Developer & Computer Science Student
             </motion.p>
           </div>
-          <div className="max-w-[720px] text-[22px] leading-relaxed text-center font-medium overflow-hidden relative z-10">
+          <div className="max-w-[650px] lg:max-w-[720px] text-xl lg:text-[22px] leading-relaxed text-center font-medium overflow-hidden relative z-10">
             <motion.p
               initial={{ y: 140, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}

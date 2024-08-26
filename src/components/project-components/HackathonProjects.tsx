@@ -28,7 +28,7 @@ const HackathonProjects: React.FC<HackathonProjectsProps> = () => {
     },
   ];
   const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { once: true, amount: 0.6 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
   return (
     <div className="" ref={ref}>
       {hackathonProjects.map((project, i) => (

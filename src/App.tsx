@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="h-screen w-full  py-6 px-12">
+      <div className="h-screen w-full  py-4 lg:py-6 px-4 lg:px-12">
         <div className="h-full w-full bg-[#f6f5fa] rounded-2xl">
           <Nav />
           <HeroCenter />

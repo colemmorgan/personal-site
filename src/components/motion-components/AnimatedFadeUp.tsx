@@ -3,11 +3,13 @@ import { motion, useInView } from "framer-motion";
 
 type AnimatedFadeUpProps = {
   children: ReactNode;
+  threshold?: number
 };
 
-const AnimatedFadeUp: React.FC<AnimatedFadeUpProps> = ({ children }) => {
+const AnimatedFadeUp: React.FC<AnimatedFadeUpProps> = ({ children, threshold }) => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { amount: 0.6, once: true });
+  const amt = threshold ? threshold : 0.6
+  const isInView = useInView(ref, { amount: amt, once: true });
 
   return (
     <motion.div

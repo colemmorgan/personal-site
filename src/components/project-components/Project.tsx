@@ -15,7 +15,7 @@ type ProjectProps = {
 
 const Project: React.FC<ProjectProps> = ({project,index}) => {
   return (
-    <div className="w-[calc(50%-16px)]" >
+    <div className="lg:w-[calc(50%-16px)]" >
       <AnimatedProjectReveal index={index}>
         <img
           src={project.img}

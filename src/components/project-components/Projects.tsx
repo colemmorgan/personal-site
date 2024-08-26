@@ -7,7 +7,7 @@ type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <div className="px-16 relative" id="projects">
+    <div className="px-4 lg:px-16 relative" id="projects">
       <div className="bg-[#fcfbfd] py-12 rounded-2xl mt-8">
         <SplitContainer left={<ProjectsTab />} right={<Featured />} />
       </div>
@@ -18,7 +18,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 export default Projects;
 
 const ProjectsTab: React.FC = () => {
-  return <h2 className="text-3xl font-medium ">Projects</h2>;
+  return <h2 className="text-3xl font-medium mb-8 xl:mb-0">Projects</h2>;
 };
 
 const Featured: React.FC = () => {
@@ -37,23 +37,11 @@ const Featured: React.FC = () => {
       desc: "Track and analyze your gaming performance by accessing a plethora of statistics from public apis and user uploaded files. Access your information anywhere with an Express/MongoDB backend.",
       img: "/replayed-thumbnail.png",
     },
-    // {
-    //   title: "CodeCode",
-    //   subtitle: "Coding Question Platform",
-    //   desc: "Practice Coding questions graded in real time with a dockerized coding execution engine. Continue where you left off anytime with Firebase Auth.",
-    //   img: "/codecode.png",
-    // },
-    // {
-    //   title: "CodeCode",
-    //   subtitle: "Coding Question Platform",
-    //   desc: "Practice Coding questions graded in real time with a dockerized coding execution engine. Continue where you left off anytime with Firebase Auth.",
-    //   img: "/codecode.png",
-    // },
   ];
 
   return (
     <>
-      <div className="flex justify-between flex-wrap gap-y-12 mb-16">
+      <div className="flex flex-col lg:flex-row justify-between flex-wrap gap-y-12 mb-16 items-center lg:items-start">
         {projects.map((project, index) => (
           <Project project={project} index={index} />
         ))}
@@ -71,4 +59,4 @@ const Featured: React.FC = () => {
   );
 };
 
-// 460x360 #fcfbfd
+// 460x360 

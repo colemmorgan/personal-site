@@ -10,7 +10,7 @@ type HeroBottomProps = {
 const HeroBottom:React.FC<HeroBottomProps> = () => {
     
     return (
-        <div className="h-[15%] flex justify-between items-end pl-12">
+        <div className="h-[15%] flex justify-between items-end pl-6 lg:pl-12">
             <div className="max-w-[170px]  pb-6">
               {/* <p className="text-sm leading-relaxed mb-4 pl-1 text-[#64606f]">
                 Feel feel to reach out to me or check my socials!

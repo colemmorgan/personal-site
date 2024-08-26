@@ -8,8 +8,8 @@ type SplitContainerProps = {
 const SplitContainer: React.FC<SplitContainerProps> = ({ left, right }) => {
   return (
     <div className="flex flex-col xl:flex-row mx-auto max-w-[1680px]">
-      <div className="w-full mb-8 lg:mb-6 pl-4 xl:mb-0 xl:w-[23%]">{left}</div>
-      <div className="w-full xl:w-[77%] px-4">{right}</div>
+      <div className="w-full pl-6 xl:mb-0 xl:w-[23%]">{left}</div>
+      <div className="w-full xl:w-[77%] px-6">{right}</div>
     </div>
   );
 };

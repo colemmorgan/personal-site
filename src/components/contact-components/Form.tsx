@@ -30,7 +30,7 @@ const Form: React.FC<FormProps> = () => {
   return (
     <form action="" className="w-full mt-6" ref={form} onSubmit={sendEmail}>
       <div>
-        <label htmlFor="" className="text-lg">
+        <label htmlFor="" className="lg:text-lg">
           Email:
         </label>
         <input
@@ -41,7 +41,7 @@ const Form: React.FC<FormProps> = () => {
         />
       </div>
       <div className="mt-6">
-        <label htmlFor="" className="text-lg">
+        <label htmlFor="" className="lg:text-lg">
           Name:
         </label>
         <input
@@ -52,7 +52,7 @@ const Form: React.FC<FormProps> = () => {
         />
       </div>
       <div className="mt-6">
-        <label htmlFor="" className="text-lg">
+        <label htmlFor="" className="lg:text-lg">
           Message:
         </label>
         <textarea
