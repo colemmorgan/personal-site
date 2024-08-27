@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FcLinux } from "react-icons/fc";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
@@ -9,6 +9,17 @@ type NavProps = {};
 
 const Nav: React.FC<NavProps> = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+
+    if(showMenu) {
+      document.body.style.overflowY = "hidden"
+    }
+    else {
+       document.body.style.overflowY = ""
+    }
+
+  },[showMenu])
   return (
     <>
       <nav className="h-[15%] flex py-6 px-6 lg:px-12">
@@ -35,8 +46,8 @@ const Nav: React.FC<NavProps> = () => {
         </div>
       </nav>
       {showMenu && (
-        <div className="fixed inset-0 bg-[#00000055] z-50 backdrop-blur-[4px] flex p-6 justify-end">
-          <div className="bg-white h-full w-[360px] rounded-[20px] py-8 px-8 relative flex flex-col justify-between ">
+        <div className="fixed inset-0  bg-[#00000055] z-50 backdrop-blur-[4px] flex p-6 justify-end" onClick={() => setShowMenu(false)}>
+          <div className="bg-white h-full w-[360px] rounded-[20px] py-8 px-8 relative flex flex-col justify-between" onClick={(e) => e.stopPropagation()}>
             <span
               className="absolute top-6 right-8 text-2xl cursor-pointer"
               onClick={() => setShowMenu(false)}
@@ -55,13 +66,13 @@ const Nav: React.FC<NavProps> = () => {
               <p className="text-2xl font-semibold">Cole Morgan</p>
               <ul className="mt-4 gap-2 flex flex-col">
                 <li>
-                  <a href="#about">About Me</a>
+                  <a href="#about" onClick={() => setShowMenu(false)}>About Me</a>
                 </li>
                 <li>
-                  <a href="#projects">Projects</a>
+                  <a href="#projects" onClick={() => setShowMenu(false)}>Projects</a>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a href="#contact" onClick={() => setShowMenu(false)}>Contact</a>
                 </li>
               </ul>
             </div>

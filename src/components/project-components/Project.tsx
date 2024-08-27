@@ -20,7 +20,7 @@ type ProjectProps = {
 const Project: React.FC<ProjectProps> = ({ project, index }) => {
   return (
     <div className="lg:w-[calc(50%-16px)] relative">
-      <div className="absolute bg-white py-1 top-3 right-3 rounded-full flex gap-3 items-center pl-4 pr-2">
+      <div className="absolute bg-white py-1 top-3 right-3 rounded-full flex gap-3 items-center pl-4 pr-2 z-30">
         {project.github && project.live ? (
           <>
             <a
@@ -49,7 +49,7 @@ const Project: React.FC<ProjectProps> = ({ project, index }) => {
         <img
           src={project.img}
           alt=""
-          className=" w-2/3 sm:w-1/2 rounded-md"
+          className="w-2/3 sm:w-1/2 rounded-md"
           loading="lazy"
         />
       </AnimatedProjectReveal>

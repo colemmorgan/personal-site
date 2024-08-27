@@ -39,7 +39,7 @@ const HeroCenter: React.FC<HeroCenterProps> = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.75, delay: 0.4 }}
             >
-              Web Developer & <br /><span className="hidden sm:inline">Computer Science </span> <span className="md:hidden">CS </span>Student
+              Web Developer <br className="sm:hidden"/> & <br className="hidden sm:inline"/><span className="hidden sm:inline">Computer Science </span> <span className="md:hidden">CS </span>Student
             </motion.p>
           </div>
           <div className="max-w-[600px] md:max-w-[650px] lg:max-w-[720px] px-4 text-lg md:text-xl lg:text-[22px] lg:leading-normal text-center font-medium overflow-hidden relative z-10">

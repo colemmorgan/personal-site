@@ -13,7 +13,7 @@ const Footer: React.FC<footerProps> = () => {
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="">Resume</a>
+            <a href="" className="cursor-not-allowed">Resume</a>
           </ul>
           <a href="#" className="text-sm sm:hidden">Home</a>
         </div>

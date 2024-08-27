@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 type FormProps = {};
 
 const Form: React.FC<FormProps> = () => {
+  const [emailState, setEmailState] = useState<'inactive' | 'loading' | 'error'>('inactive')
   const form = useRef<HTMLFormElement>(null);
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
   const service = import.meta.env.VITE_SERVICE;
@@ -12,6 +13,7 @@ const Form: React.FC<FormProps> = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     if (!form.current) return;
     e.preventDefault();
+    setEmailState('loading')
     
     emailjs
       .sendForm(service, template, form.current, {
@@ -19,10 +21,10 @@ const Form: React.FC<FormProps> = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setEmailState('inactive')
         },
-        (error) => {
-          console.log("FAILED...", error.text);
+        () => {
+          setEmailState('error');
         }
       );
   };
@@ -34,10 +36,11 @@ const Form: React.FC<FormProps> = () => {
           Email:
         </label>
         <input
-          type="text"
+          type="email"
+          required
           name="user_email"
           placeholder="email@email.com"
-          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 outline-none text-sm md:text-base"
+          className="w-full border border-gray-300 mt-2 rounded-md px-3 py-2 outline-none text-sm md:text-base"
         />
       </div>
       <div className="mt-6">
@@ -46,9 +49,10 @@ const Form: React.FC<FormProps> = () => {
         </label>
         <input
           name="user_name"
+          required
           type="text"
           placeholder="John Doe"
-          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 outline-none text-sm md:text-base"
+          className="w-full border border-gray-300 mt-2 rounded-md px-3 py-2 outline-none text-sm md:text-base"
         />
       </div>
       <div className="mt-6">
@@ -57,14 +61,17 @@ const Form: React.FC<FormProps> = () => {
         </label>
         <textarea
           name="message"
+          required
           id=""
           rows={3}
-          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 resize-none outline-none text-sm md:text-base"
+          className="w-full border border-gray-300 mt-2 rounded-md px-3 py-2 resize-none outline-none text-sm md:text-base"
           placeholder="Your message here."
         ></textarea>
       </div>
       <button className="w-full bg-[#1e1e1e] text-white rounded-md py-2 mt-6 text-xs md:text-sm" type="submit">
-        Send Message
+        {emailState === 'inactive' && "Send Message"}
+        {emailState === 'error' && "Messaging service down. Please send an email."}
+        {emailState === 'loading' && "Loading..."}
       </button>
     </form>
   );

@@ -36,7 +36,7 @@ const Featured: React.FC = () => {
     },
     {
       title: "Replayed",
-      subtitle: "Video Game Performance Analyzer",
+      subtitle: "Fornite Performance Analyzer",
       desc: "Track and analyze your gaming performance by accessing a plethora of statistics from public apis and user uploaded files. Access your information anywhere with an Express/MongoDB backend.",
       img: "/replayed-thumbnail.png",
     },
