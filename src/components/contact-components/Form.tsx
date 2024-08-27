@@ -28,42 +28,42 @@ const Form: React.FC<FormProps> = () => {
   };
 
   return (
-    <form action="" className="w-full mt-6" ref={form} onSubmit={sendEmail}>
+    <form action="" className="w-full mt-4 md:mt-6" ref={form} onSubmit={sendEmail}>
       <div>
-        <label htmlFor="" className="lg:text-lg">
+        <label htmlFor="" className="text-sm md:text-base lg:text-lg">
           Email:
         </label>
         <input
           type="text"
           name="user_email"
           placeholder="email@email.com"
-          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 outline-none"
+          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 outline-none text-sm md:text-base"
         />
       </div>
       <div className="mt-6">
-        <label htmlFor="" className="lg:text-lg">
+        <label htmlFor="" className="text-sm md:text-base lg:text-lg">
           Name:
         </label>
         <input
           name="user_name"
           type="text"
           placeholder="John Doe"
-          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 outline-none"
+          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 outline-none text-sm md:text-base"
         />
       </div>
       <div className="mt-6">
-        <label htmlFor="" className="lg:text-lg">
+        <label htmlFor="" className="text-sm md:text-base lg:text-lg">
           Message:
         </label>
         <textarea
           name="message"
           id=""
           rows={3}
-          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 resize-none outline-none"
+          className="w-full border border-gray-300 mt-2 rounded-md px-4 py-2 resize-none outline-none text-sm md:text-base"
           placeholder="Your message here."
         ></textarea>
       </div>
-      <button className="w-full bg-[#1e1e1e] text-white rounded-md py-2 mt-6 text-sm" type="submit">
+      <button className="w-full bg-[#1e1e1e] text-white rounded-md py-2 mt-6 text-xs md:text-sm" type="submit">
         Send Message
       </button>
     </form>

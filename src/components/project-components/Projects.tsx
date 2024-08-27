@@ -7,8 +7,8 @@ type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <div className="px-4 lg:px-16 relative" id="projects">
-      <div className="bg-[#fcfbfd] py-12 rounded-2xl mt-8">
+    <div className="md:px-4 lg:px-16 relative" id="projects">
+      <div className="bg-[#fcfbfd] py-12 md:rounded-2xl mt-8">
         <SplitContainer left={<ProjectsTab />} right={<Featured />} />
       </div>
     </div>
@@ -18,7 +18,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 export default Projects;
 
 const ProjectsTab: React.FC = () => {
-  return <h2 className="text-3xl font-medium mb-8 xl:mb-0">Projects</h2>;
+  return <h2 className="text-2xl sm:text-3xl font-medium mb-8 xl:mb-0">Projects</h2>;
 };
 
 const Featured: React.FC = () => {
@@ -43,7 +43,7 @@ const Featured: React.FC = () => {
     <>
       <div className="flex flex-col lg:flex-row justify-between flex-wrap gap-y-12 mb-16 items-center lg:items-start">
         {projects.map((project, index) => (
-          <Project project={project} index={index} />
+          <Project project={project} index={index} key={index} />
         ))}
       </div>
       <div className="">

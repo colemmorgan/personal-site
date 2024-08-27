@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import React, { useRef, useEffect, useState, Suspense } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame, extend } from "@react-three/fiber";
@@ -11,13 +11,40 @@ import { motion } from "framer-motion";
 
 extend({ CustomShaderMaterial });
 
-
-
 const Wobble = () => {
   const [geometryReady, setGeometryReady] = useState(false);
   const materialRef = useRef<THREE.ShaderMaterial>(null);
   const depthMaterialRef = useRef<THREE.ShaderMaterial>(null);
   const geometryRef = useRef<THREE.IcosahedronGeometry>(null);
+
+  const [scale, setScale] = useState<number>(0);
+
+  useEffect(() => {
+    const updateScale = () => {
+      const width = window.innerWidth;
+
+      if (width >= 1280) {
+        setScale(1.6);
+      } else if (width >= 1024) {
+        setScale(1.5);
+      } else if (width >= 768) {
+        setScale(1.4);
+      } else if (width >= 640) {
+        setScale(1.3);
+      } else if (width >= 500) {
+        setScale(1.1);
+      } else {
+        setScale(1.0);
+      }
+    };
+
+    updateScale();
+
+    window.addEventListener("resize", updateScale);
+    return () => {
+      window.removeEventListener("resize", updateScale);
+    };
+  }, []);
 
   useEffect(() => {
     const geometry = new IcosahedronGeometry(2.5, 50);
@@ -78,7 +105,7 @@ const Wobble = () => {
 
   return (
     <mesh
-      scale={1.6}
+      scale={scale}
       geometry={geometryRef.current}
       material={materialRef.current}
       customDepthMaterial={depthMaterialRef.current}
@@ -117,13 +144,15 @@ const Lights = () => {
 };
 
 type WobbleProps = {
-    animating: boolean;
-  };
+  animating: boolean;
+};
 
 const Scene: React.FC<WobbleProps> = ({ animating }) => (
-  <motion.div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-[800px] max-h-[800px] h-full w-full opacity-0"
-   animate={{opacity: animating ? 0 : 0.2}}
-   transition={{ease: "easeInOut", delay: 0.5, duration: 0.2}}>
+  <motion.div
+    className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  max-w-[800px] max-h-[800px] h-full w-full opacity-0"
+    animate={{ opacity: animating ? 0 : 0.2 }}
+    transition={{ ease: "easeInOut", delay: 0.5, duration: 0.2 }}
+  >
     <Canvas shadows camera={{ position: [13, -3, -5], fov: 35 }}>
       <ambientLight intensity={0.6} />
       <Lights />

@@ -20,10 +20,10 @@ const HeroCenter: React.FC<HeroCenterProps> = () => {
             transition={{ ease: "easeInOut", duration: 0.3, delay: 0.4 }}
           >
             <div className="flex items-center gap-4 mb-10">
-              <p className="text-2xl font-medium text-[#292929]">
+              <p className="text-lg sm:text-2xl font-medium text-[#292929]">
                 Hello, I'm Cole Morgan!
               </p>
-              <span className="border border-[#B8B8B8] rounded-full px-4 py-1.5 text-sm ">
+              <span className="border border-[#B8B8B8] rounded-full px-3 py-1 text-xs sm:text-sm ">
                 Web-Developer
               </span>
             </div>
@@ -33,16 +33,16 @@ const HeroCenter: React.FC<HeroCenterProps> = () => {
       </AnimatePresence>
       {!animating && (
         <>
-          <div className="max-w-[750px] text-5xl lg:text-[56px] leading-[1.125] text-center mb-4 overflow-hidden relative z-10 nohemi">
+          <div className="max-w-[770px] text-4xl md:text-5xl lg:text-[56px] lg:leading-[1.25]  text-center mb-2 sm:mb-4 overflow-hidden relative z-10 nohemi px-3">
             <motion.p
               initial={{ y: 180, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.75, delay: 0.4 }}
             >
-              Web Developer & Computer Science Student
+              Web Developer & <br /><span className="hidden sm:inline">Computer Science </span> <span className="md:hidden">CS </span>Student
             </motion.p>
           </div>
-          <div className="max-w-[650px] lg:max-w-[720px] text-xl lg:text-[22px] leading-relaxed text-center font-medium overflow-hidden relative z-10">
+          <div className="max-w-[600px] md:max-w-[650px] lg:max-w-[720px] px-4 text-lg md:text-xl lg:text-[22px] lg:leading-normal text-center font-medium overflow-hidden relative z-10">
             <motion.p
               initial={{ y: 140, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
