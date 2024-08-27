@@ -17,13 +17,13 @@ const HackathonProjects: React.FC<HackathonProjectsProps> = () => {
       title: "Access For All",
       desc: "A website designed to check and the display the accessability of various sites for the University of Florida. Also features a forum for extra communication.",
       github: "https://github.com/colemmorgan/Medihacks2024",
-      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
+      video: "https://www.youtube.com/watch?v=bYowv4UtAiM",
     },
     {
       title: "Chroma",
       desc: "A web app designed to adjust the colors of images so that colorblind users can experience heightened color differentiation.",
       github: "https://github.com/colemmorgan/Chroma",
-      video: "https://www.youtube.com/watch?v=cK4NSdyTnr0",
+      video: "https://www.youtube.com/watch?v=Cni7xOJ8CLU",
       live: "https://chroma-nu.vercel.app/",
     },
   ];

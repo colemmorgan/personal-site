@@ -38,6 +38,10 @@ body {
   background: linear-gradient(45deg, #84ffc9,#aab2ff,#eca0ff);
 }
 
+.custom-dull {
+  background: linear-gradient(45deg, #84ffc966,#aab2ff66,#eca0ff66);
+}
+
 .custom-height {
-  height: max(100vh, 680px);
+  height: max(100svh, 650px);
 }

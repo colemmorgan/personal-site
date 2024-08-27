@@ -3,6 +3,7 @@ import SplitContainer from "../about-components/SplitContainer";
 import Project from "./Project";
 import HackathonProjects from "./HackathonProjects";
 
+
 type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
@@ -30,6 +31,8 @@ const Featured: React.FC = () => {
       subtitle: "Coding Question Platform",
       desc: "Practice Coding questions graded in real time with a dockerized coding execution engine. Continue where you left off anytime with Firebase Auth.",
       img: "/codecode.png",
+      github: "https://github.com/colemmorgan/CodeCode",
+      live: "https://code-code-theta.vercel.app/"
     },
     {
       title: "Replayed",

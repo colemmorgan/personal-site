@@ -13,10 +13,10 @@ const HeroBottom:React.FC<HeroBottomProps> = () => {
         <div className="h-[15%] flex justify-between items-end pl-6 lg:pl-12">
             <div className="max-w-[170px]  pb-6">
               <ul className="flex gap-5 text-lg text-[#404040]">
-                <a className="bg-white p-2.5 rounded-full cursor-pointer" href='https://www.linkedin.com/in/cole-morgan-748045253/' target='_blank'>
+                <a className="bg-white p-2.5 rounded-full cursor-pointer" href='https://github.com/colemmorgan' target='_blank'>
                   <FaGithub />
                 </a>
-                <a className="bg-white p-2.5 rounded-full cursor-pointer" href='https://github.com/colemmorgan' target='_blank'>
+                <a className="bg-white p-2.5 rounded-full cursor-pointer" href='https://www.linkedin.com/in/cole-morgan-748045253/' target='_blank'>
                   <FaLinkedinIn />
                 </a>
                 <a className="bg-white p-2.5 rounded-full cursor-pointer" href='https://devpost.com/colemmorgan' target='_blank'>

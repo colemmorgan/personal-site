@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="custom-height w-full md:py-4 lg:py-6 md:px-4 lg:px-12">
+      <div className="custom-height w-full md:py-4 lg:py-5 md:px-4 lg:px-12">
         <div className="h-full  w-full bg-[#f6f5fa] md:rounded-2xl ">
           <Nav />
           <HeroCenter />

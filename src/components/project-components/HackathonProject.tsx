@@ -69,7 +69,7 @@ const HackathonProject: React.FC<HackathonProjectProps> = ({
           </div>
         </motion.div>
       </div>
-      <div className="border-b border-gray-200 overflow-hidden py-2 sm:hidden">
+      <div className="border-b border-gray-200 overflow-hidden py-3 sm:hidden">
         <motion.div
           className=""
           initial={{ y: 100 }}
