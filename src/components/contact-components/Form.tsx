@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 type FormProps = {};
 
 const Form: React.FC<FormProps> = () => {
-  const [emailState, setEmailState] = useState<'inactive' | 'loading' | 'error'>('inactive')
+  const [emailState, setEmailState] = useState<'inactive' | 'loading' | 'error' | 'sent'>('inactive')
   const form = useRef<HTMLFormElement>(null);
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
   const service = import.meta.env.VITE_SERVICE;
@@ -21,9 +21,10 @@ const Form: React.FC<FormProps> = () => {
       })
       .then(
         () => {
-          setEmailState('inactive')
+          setEmailState('sent')
         },
-        () => {
+        (error) => {
+          console.log(error)
           setEmailState('error');
         }
       );
@@ -72,6 +73,7 @@ const Form: React.FC<FormProps> = () => {
         {emailState === 'inactive' && "Send Message"}
         {emailState === 'error' && "Messaging service down. Please send an email."}
         {emailState === 'loading' && "Loading..."}
+        {emailState === 'sent' && "Message sent!"}
       </button>
     </form>
   );
