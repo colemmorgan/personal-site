@@ -139,7 +139,7 @@ const Nav: React.FC<NavProps> = () => {
           <motion.nav
             className="z-40 fixed left-0 right-0 px-4 md:px-8 xl:px-20"
             initial={{ top: 0, opacity: 0 }}
-            animate={{ top: 16, opacity: 1 }}
+            animate={{ top: 12, opacity: 1 }}
             exit={{ top: -28, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >

@@ -22,7 +22,7 @@ const NameAnimation: React.FC<NameAnimationProps> = ({ setAnimating }) => {
           strokeWidth="2"
           strokeOpacity="0.0"
           strokeLinecap={"round"}
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: 0, strokeOpacity: 0  }}
           animate={{ pathLength: 1, strokeOpacity: 1 }}
           transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
         />
@@ -32,7 +32,7 @@ const NameAnimation: React.FC<NameAnimationProps> = ({ setAnimating }) => {
           strokeOpacity="0"
           strokeWidth="2"
           strokeLinecap={"round"}
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: 0, strokeOpacity: 0 }}
           animate={{ pathLength: 1, strokeOpacity: 1 }}
           transition={{ delay: 1.3, duration: 1.55, ease: "easeInOut" }}
           onAnimationComplete={() => setAnimating(false)}
@@ -43,7 +43,7 @@ const NameAnimation: React.FC<NameAnimationProps> = ({ setAnimating }) => {
           strokeOpacity="0.0"
           strokeWidth="2"
           strokeLinecap={"round"}
-          initial={{ pathLength: 0 }}
+          initial={{ pathLength: 0, strokeOpacity: 0  }}
           animate={{ pathLength: 1, strokeOpacity: 1 }}
           transition={{ delay: 1.05, duration: 0.4, ease: "easeInOut" }}
         />

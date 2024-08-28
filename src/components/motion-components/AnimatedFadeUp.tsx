@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 type AnimatedFadeUpProps = {
   children: ReactNode;
   threshold?: number
+  key: string
 };
 
 const AnimatedFadeUp: React.FC<AnimatedFadeUpProps> = ({ children, threshold }) => {
