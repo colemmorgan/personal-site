@@ -45,3 +45,7 @@ body {
 .custom-height {
   height: max(100svh, 650px);
 }
+
+.nav__box-shadow {
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}

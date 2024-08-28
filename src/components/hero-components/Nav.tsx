@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { FcLinux } from "react-icons/fc";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
+// import { useInView } from "framer-motion";
 
 type NavProps = {};
 
 const Nav: React.FC<NavProps> = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const navRef = useRef<HTMLElement | null>(null)
 
-  useEffect(() => {
+  // In progress
+  // const isInView = useInView(navRef, { amount: 1.0, once: false });
 
-    if(showMenu) {
-      document.body.style.overflowY = "hidden"
-    }
-    else {
-       document.body.style.overflowY = ""
-    }
 
-  },[showMenu])
   return (
     <>
-      <nav className="h-[15%] flex py-6 px-6 lg:px-12">
+      <nav className="h-[15%] flex py-6 px-6 lg:px-12" ref={navRef}>
         <div className="w-[40%]">
           <p className="text-lg font-medium">Cole Morgan</p>
           <p className="text-xs hidden md:flex items-center gap-1">
@@ -55,7 +51,7 @@ const Nav: React.FC<NavProps> = () => {
               <IoMdClose />
             </span>
             <div className="flex items-center gap-3.5">
-              <img src="/me.jpg" alt="" className="w-16 rounded-full" />
+              <img src="/me.jpg" alt="" className="w-16 h-[60px] rounded-full" />
               <div className="">
                 <p className="font-medium text-base">Cole Morgan</p>
                 <p className="text-sm font-[350]">colemmorgann@gmail.com</p>
@@ -106,6 +102,11 @@ const Nav: React.FC<NavProps> = () => {
           </div>
         </div>
       )}
+      {/* {!isInView && <nav className="z-40 fixed left-0 right-0 px-20 top-4">
+        <div className="bg-white w-full px-6 py-2 rounded-full flex justify-between nav__box-shadow">
+          <p className="font-medium text-lg">Cole Morgan</p>
+        </div>
+      </nav>} */}
     </>
   );
 };

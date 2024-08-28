@@ -34,19 +34,19 @@ const Bio: React.FC = () => {
       </p>
       <div className="flex mt-10">
         <div className="w-1/3 pr-3  flex flex-col items-center lg:items-start text-center">
-          <p className="text-3xl sm:text-4xl nohemi">
+          <p className="text-3xl sm:text-4xl nohemi min-h-7 h-full">
             <AnimatedCounter from={200} to={263} />
           </p>
           <p className="mt-1.5 font-light text-xs sm:text-base">Contributions in 2024</p>
         </div>
         <div className="w-1/3 pr-3 flex flex-col items-center lg:items-start text-center sm:text-right">
-          <p className="text-3xl sm:text-4xl nohemi">
+          <p className="text-3xl sm:text-4xl nohemi min-h-7">
             <AnimatedCounter from={0} to={3} />x
           </p>
           <p className="mt-1.5 font-light text-xs sm:text-base ">Hackathon Winner</p>
         </div>
         <div className="w-1/3  flex flex-col items-center lg:items-start text-center sm:text-right">
-          <p className="text-3xl sm:text-4xl nohemi">
+          <p className="text-3xl sm:text-4xl nohemi min-h-7">
             <AnimatedCounter from={900} to={1000} />s
           </p>
           <p className="mt-1.5 font-light text-xs sm:text-base">Hours Spent Coding</p>
