@@ -25,8 +25,8 @@ const HackathonProject: React.FC<HackathonProjectProps> = ({
       <div className="hidden sm:block border-b border-gray-200 overflow-hidden">
         <motion.div
           className="grid grid-cols-12 w-full "
-          initial={{ y: 60 }}
-          animate={isInView ? { y: 0 } : { y: 60 }}
+          initial={{ y: "110%" }}
+          animate={isInView ? { y: 0 } : { y: "110%" }}
           transition={{ duration: 0.4, ease: "easeInOut", delay: 0.18 * index }}
         >
           <p className="col-span-2  p-2 pl-0 flex gap-1 items-center text-sm lg:text-base">

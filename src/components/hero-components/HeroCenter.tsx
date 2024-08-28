@@ -36,7 +36,7 @@ const HeroCenter: React.FC<HeroCenterProps> = () => {
       </AnimatePresence>
       {!animating && (
         <>
-          <div className="max-w-[770px] text-4xl md:text-5xl lg:text-[56px] lg:leading-[1.25]  text-center mb-2 sm:mb-4 overflow-hidden relative z-10 nohemi px-3">
+          <div className="max-w-[770px] text-4xl md:text-5xl lg:text-[52px] xxl:text-[56px] lg:leading-[1.25]  text-center mb-2 sm:mb-4 overflow-hidden relative z-10 nohemi px-3">
             <motion.p
               key={"Title"}
               initial={{ y: 180, opacity: 0 }}
