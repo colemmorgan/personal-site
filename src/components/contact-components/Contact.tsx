@@ -8,7 +8,7 @@ type ContactProps = {};
 
 const Contact: React.FC<ContactProps> = () => {
   return (
-    <div className="md:px-6 lg:px-16 relative py-12 rounded-2xl mt-4 lg:mt-8" id="contact">
+    <div className="md:px-6 lg:px-16 relative py-12 rounded-2xl sm:mt-4 lg:mt-8" id="contact">
       <SplitContainer
         left={<h3 className="font-medium text-2xl sm:text-3xl">Contact</h3>}
         right={<ContactRight />}
@@ -21,7 +21,7 @@ export default Contact;
 const ContactRight: React.FC = () => {
   return (
     <AnimatedFadeUp threshold={0.4}>
-      <p className="text-base md:text-lg lg:text-xl font-semibold py-2 mt-4 lg:mt-0">
+      <p className="text-base md:text-lg lg:text-xl font-semibold py-2 mt-3 sm:mt-4 lg:mt-0">
         Let's get in touch!{" "}
         <span className="font-normal">
           Send me a message below or contact me at one of my socials.

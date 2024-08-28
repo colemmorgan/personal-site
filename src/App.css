@@ -30,9 +30,6 @@ body {
   font-family: 'Nohemi-Bold', "Inter Tight", system-ui, sans-serif;
 }
 
-.bs {
-  box-shadow: (136, 136, 136, 0.1) 1px 1px 1px 0px;
-}
 
 .custom {
   background: linear-gradient(45deg, #84ffc9,#aab2ff,#eca0ff);
@@ -47,5 +44,5 @@ body {
 }
 
 .nav__box-shadow {
-  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  box-shadow: rgba(0,0,0, 0.15) 0px 8px 24px;
 }

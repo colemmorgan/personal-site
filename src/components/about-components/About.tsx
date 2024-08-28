@@ -32,7 +32,7 @@ const Bio: React.FC = () => {
           interfaces that flow effortlessly and engage users.
         </span>
       </p>
-      <div className="flex mt-10">
+      <div className="flex mt-6 sm:mt-10">
         <div className="w-1/3 pr-3  flex flex-col items-center lg:items-start text-center">
           <p className="text-3xl sm:text-4xl nohemi min-h-7 h-full">
             <AnimatedCounter from={200} to={263} />

@@ -1,20 +1,36 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FcLinux } from "react-icons/fc";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
-// import { useInView } from "framer-motion";
+import { AnimatePresence, useInView, motion } from "framer-motion";
 
 type NavProps = {};
 
 const Nav: React.FC<NavProps> = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const navRef = useRef<HTMLElement | null>(null)
+  const navRef = useRef<HTMLElement | null>(null);
 
-  // In progress
-  // const isInView = useInView(navRef, { amount: 1.0, once: false });
+  const isInView = useInView(navRef, { amount: 1.0, once: false });
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
+  const [lastScrollY, setLastScrollY] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <>
@@ -42,8 +58,14 @@ const Nav: React.FC<NavProps> = () => {
         </div>
       </nav>
       {showMenu && (
-        <div className="fixed inset-0  bg-[#00000055] z-50 backdrop-blur-[4px] flex p-6 justify-end" onClick={() => setShowMenu(false)}>
-          <div className="bg-white h-full w-[360px] rounded-[20px] py-8 px-8 relative flex flex-col justify-between" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="fixed inset-0  bg-[#00000055] z-50 backdrop-blur-[4px] flex p-6 justify-end"
+          onClick={() => setShowMenu(false)}
+        >
+          <div
+            className="bg-white h-full w-[360px] rounded-[20px] py-8 px-8 relative flex flex-col justify-between"
+            onClick={(e) => e.stopPropagation()}
+          >
             <span
               className="absolute top-6 right-8 text-2xl cursor-pointer"
               onClick={() => setShowMenu(false)}
@@ -51,7 +73,11 @@ const Nav: React.FC<NavProps> = () => {
               <IoMdClose />
             </span>
             <div className="flex items-center gap-3.5">
-              <img src="/me.jpg" alt="" className="w-16 h-[60px] rounded-full" />
+              <img
+                src="/me.jpg"
+                alt=""
+                className="w-16 h-[60px] rounded-full"
+              />
               <div className="">
                 <p className="font-medium text-base">Cole Morgan</p>
                 <p className="text-sm font-[350]">colemmorgann@gmail.com</p>
@@ -62,13 +88,19 @@ const Nav: React.FC<NavProps> = () => {
               <p className="text-2xl font-semibold">Cole Morgan</p>
               <ul className="mt-4 gap-2 flex flex-col">
                 <li>
-                  <a href="#about" onClick={() => setShowMenu(false)}>About Me</a>
+                  <a href="#about" onClick={() => setShowMenu(false)}>
+                    About Me
+                  </a>
                 </li>
                 <li>
-                  <a href="#projects" onClick={() => setShowMenu(false)}>Projects</a>
+                  <a href="#projects" onClick={() => setShowMenu(false)}>
+                    Projects
+                  </a>
                 </li>
                 <li>
-                  <a href="#contact" onClick={() => setShowMenu(false)}>Contact</a>
+                  <a href="#contact" onClick={() => setShowMenu(false)}>
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>
@@ -102,11 +134,24 @@ const Nav: React.FC<NavProps> = () => {
           </div>
         </div>
       )}
-      {/* {!isInView && <nav className="z-40 fixed left-0 right-0 px-20 top-4">
-        <div className="bg-white w-full px-6 py-2 rounded-full flex justify-between nav__box-shadow">
-          <p className="font-medium text-lg">Cole Morgan</p>
-        </div>
-      </nav>} */}
+      <AnimatePresence>
+      {!isInView && scrollDirection === "up" && (
+          <motion.nav
+            className="z-40 fixed left-0 right-0 px-4 md:px-8 xl:px-20"
+            initial={{ top: 0, opacity: 0 }}
+            animate={{ top: 16, opacity: 1 }}
+            exit={{ top: -28, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="bg-white w-full px-6 py-2 rounded-full flex justify-between nav__box-shadow">
+              <p className="font-medium text-base sm:text-lg">Cole Morgan</p>
+              <div className="flex gap-3 items-center">
+                <span className="text-2xl cursor-pointer" onClick={() => setShowMenu(true)}><IoMenu/></span>
+              </div>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </>
   );
 };
