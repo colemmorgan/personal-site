@@ -18,7 +18,7 @@ const Footer: React.FC<footerProps> = () => {
           <a href="#" className="text-sm sm:hidden">Home</a>
         </div>
         <div className="mt-8 flex justify-between items-center">
-            <p className="text-sm font-light">© 2024 Cole Morgan. All rights reserved.</p>
+            <p className="text-xs sm:text-sm font-light">© 2024 Cole Morgan. All rights reserved.</p>
             <img src="/favicon.svg" alt=""  className="max-w-8"/>
         </div>
       </div>

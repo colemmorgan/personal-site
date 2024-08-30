@@ -38,7 +38,7 @@ const Bio: React.FC = () => {
           <p className="text-3xl sm:text-4xl nohemi min-h-7 h-full">
             <GitHubContributions/>
           </p>
-          <p className="mt-1.5 font-light text-xs sm:text-base">Contributions in 2024</p>
+          <p className="mt-1.5 font-light text-xs sm:text-base"><span className="hidden sm:inline">Github </span>Contributions in 2024</p>
         </div>
         <div className="w-1/3 pr-3 flex flex-col items-center lg:items-start text-center sm:text-right">
           <p className="text-3xl sm:text-4xl nohemi min-h-7">

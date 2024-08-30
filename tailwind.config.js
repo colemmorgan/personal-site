@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xxl': '1440px', // Add the custom 'xxl' breakpoint
+        'xxl': '1536px',
       },
     },
   },
