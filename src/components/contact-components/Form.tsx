@@ -10,7 +10,9 @@ const Form: React.FC<FormProps> = () => {
   const service = import.meta.env.VITE_SERVICE;
   const template = import.meta.env.VITE_TEMPLATE;
 
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+   
     if (!form.current) return;
     e.preventDefault();
     setEmailState('loading')

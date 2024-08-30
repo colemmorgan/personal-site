@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import AnimatedCounter from '../motion-components/AnimatedCounter';
 
 interface ContributionsData {
   data: {
@@ -14,19 +15,20 @@ interface ContributionsData {
 }
 
 interface Props {
-  username: string;
+
 }
 
-const GitHubContributions: React.FC<Props> = ({ username }) => {
+const GitHubContributions: React.FC<Props> = ({ }) => {
   const [contributions, setContributions] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(true)
+  const apiKey = import.meta.env.VITE_GITHUB_API_KEY;
 
   useEffect(() => {
     const fetchContributions = async () => {
-      const token = '';
       const query = `
         query {
-          user(login: "${username}") {
+          user(login: "colemmorgan") {
             contributionsCollection(from: "2024-01-01T00:00:00Z", to: "2024-12-31T23:59:59Z") {
               contributionCalendar {
                 totalContributions
@@ -42,34 +44,38 @@ const GitHubContributions: React.FC<Props> = ({ username }) => {
           { query },
           {
             headers: {
-              'Authorization': `Bearer ${token}`,
+              'Authorization': `Bearer ${apiKey}`,
               'Content-Type': 'application/json',
             },
           }
         );
 
         setContributions(response.data.data.user.contributionsCollection.contributionCalendar.totalContributions);
+        setLoading(false)
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An unknown error occurred');
       }
     };
 
     fetchContributions();
-  }, [username]);
+  }, []);
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return ("Error");
+  }
+
+  if(loading) {
+    return "0"
   }
 
   if (contributions === null) {
-    return <div>Loading...</div>;
+    return "0";
   }
 
   return (
-    <div>
-      <h2>GitHub Contributions for {username} in 2024</h2>
-      <p>Total contributions: {contributions}</p>
-    </div>
+  
+      <AnimatedCounter from={contributions - 100} to={contributions} />
+
   );
 };
 
