@@ -12,7 +12,7 @@ const Nav: React.FC<NavProps> = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const navRef = useRef<HTMLElement | null>(null);
 
-  const isInView = useInView(navRef, { amount: 1.0, once: false });
+  const isInView = useInView(navRef, { amount: 0.5, once: false });
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const [lastScrollY, setLastScrollY] = useState(0);
 
