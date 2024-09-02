@@ -1,5 +1,5 @@
 import React from "react";
-import SplitContainer from "../about-components/SplitContainer";
+import SplitContainer from "../SplitContainer";
 import { FaLinkedinIn } from "react-icons/fa";
 import Form from "./Form";
 import AnimatedFadeUp from "../motion-components/AnimatedFadeUp";
@@ -32,7 +32,7 @@ const ContactRight: React.FC = () => {
           Email: <span className="font-semibold">colemmorgann@gmail.com</span>
         </p>
         <a
-          className="p-1.5 text-sm bg-[#1e1e1e] text-white rounded-full"
+          className="p-1.5 text-sm bg-black text-white rounded-full"
           href="https://www.linkedin.com/in/cole-morgan-748045253/"
           target="_blank"
         >

@@ -1,5 +1,5 @@
 import React from "react";
-import SplitContainer from "../about-components/SplitContainer";
+import SplitContainer from "../SplitContainer";
 import Project from "./Project";
 import HackathonProjects from "./HackathonProjects";
 

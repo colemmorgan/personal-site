@@ -71,7 +71,7 @@ const Form: React.FC<FormProps> = () => {
           placeholder="Your message here."
         ></textarea>
       </div>
-      <button className="w-full bg-[#1e1e1e] text-white rounded-md py-2 mt-6 text-xs md:text-sm" type="submit">
+      <button className="w-full bg-black text-white rounded-md py-2 mt-6 text-xs md:text-sm" type="submit">
         {emailState === 'inactive' && "Send Message"}
         {emailState === 'error' && "Messaging service down. Please send an email."}
         {emailState === 'loading' && "Loading..."}

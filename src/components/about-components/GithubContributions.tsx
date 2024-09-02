@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import AnimatedCounter from '../motion-components/AnimatedCounter';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import AnimatedCounter from "../motion-components/AnimatedCounter";
 
 interface ContributionsData {
   data: {
@@ -14,14 +14,12 @@ interface ContributionsData {
   };
 }
 
-interface Props {
+interface Props {}
 
-}
-
-const GitHubContributions: React.FC<Props> = ({ }) => {
+const GitHubContributions: React.FC<Props> = ({}) => {
   const [contributions, setContributions] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true)
+  const [loading, setLoading] = useState<boolean>(true);
   const apiKey = import.meta.env.VITE_GITHUB_API_KEY;
 
   useEffect(() => {
@@ -40,20 +38,25 @@ const GitHubContributions: React.FC<Props> = ({ }) => {
 
       try {
         const response = await axios.post<ContributionsData>(
-          'https://api.github.com/graphql',
+          "https://api.github.com/graphql",
           { query },
           {
             headers: {
-              'Authorization': `Bearer ${apiKey}`,
-              'Content-Type': 'application/json',
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
             },
           }
         );
 
-        setContributions(response.data.data.user.contributionsCollection.contributionCalendar.totalContributions);
-        setLoading(false)
+        setContributions(
+          response.data.data.user.contributionsCollection.contributionCalendar
+            .totalContributions
+        );
+        setLoading(false);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'An unknown error occurred');
+        setError(
+          err instanceof Error ? err.message : "An unknown error occurred"
+        );
       }
     };
 
@@ -61,22 +64,18 @@ const GitHubContributions: React.FC<Props> = ({ }) => {
   }, []);
 
   if (error) {
-    return ("Error");
+    return "Error";
   }
 
-  if(loading) {
-    return "0"
+  if (loading) {
+    return "0";
   }
 
   if (contributions === null) {
     return "0";
   }
 
-  return (
-  
-      <AnimatedCounter from={contributions - 100} to={contributions} />
-
-  );
+  return <AnimatedCounter from={contributions - 100} to={contributions} />;
 };
 
 export default GitHubContributions;
