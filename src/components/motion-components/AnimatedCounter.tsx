@@ -30,6 +30,13 @@ const AnimatedCounter:React.FC<AnimatedCounterProps> = ({from, to, animationOpti
     },[ref, inView, to,from])
 
 
-    return <span ref={ref}/>
+    if(!inView) {
+        return <span ref={ref}>{from}</span>
+    }
+
+    else {
+        return (<span ref={ref}/>)
+    }
+
 }
 export default AnimatedCounter;

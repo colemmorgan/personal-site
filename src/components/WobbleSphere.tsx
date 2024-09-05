@@ -128,7 +128,7 @@ type SceneProps = {
 
 const Scene: React.FC<SceneProps> = React.memo(({ animating }) => (
   <motion.div
-    className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px] max-h-[800px] h-full w-full opacity-0"
+    className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px] max-h-[800px] h-full w-full opacity-0 hidden sm:block"
     animate={{ opacity: animating ? 0 : 0.2 }}
     transition={{ ease: "easeInOut", delay: 0.5, duration: 0.2 }}
   >

@@ -59,7 +59,7 @@ const Nav: React.FC<NavProps> = () => {
       </nav>
       {showMenu && (
         <div
-          className="fixed inset-0  bg-black bg-opacity-55 z-50 backdrop-blur-[4px] flex p-6 justify-end"
+          className="fixed h-[100dvh] top-0 left-0 right-0 bg-black bg-opacity-55 z-50 backdrop-blur-[4px] flex p-6 justify-end"
           onClick={() => setShowMenu(false)}
         >
           <div

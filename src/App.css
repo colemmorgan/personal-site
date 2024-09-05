@@ -40,9 +40,19 @@ body {
 }
 
 .custom-height {
-  height: max(100svh, 635px);
+  height: max(100svh, 635px); 
+}
+
+@media (max-width: 640px) {
+  .custom-height {
+    height: 550px;
+  }
 }
 
 .nav__box-shadow {
   box-shadow: rgba(0,0,0, 0.10) 0px 8px 24px;
+}
+
+.hero-button {
+  transition: all 250ms ease;
 }

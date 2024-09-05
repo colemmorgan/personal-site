@@ -24,13 +24,13 @@ const HeroBottom:React.FC<HeroBottomProps> = () => {
                 </a>
               </ul>
             </div>
-            <div className="bg-white py-3 hidden sm:flex items-center text-[13px] rounded-tl-xl px-4 gap-2 ">
+            <div className="bg-white py-3 hidden sm:flex items-center text-[13px] rounded-tl-xl px-4 gap-4 ">
               <a href="#about" className="py-1 px-4 rounded-full ">
                 About Me
               </a>
-              <a href="#projects" className="py-1 px-4 rounded-full ">
+              {/* <a href="#projects" className="py-1 px-4 rounded-full ">
                 Projects
-              </a>
+              </a> */}
               <a href="#contact" className="bg-black py-1 px-4 text-white rounded-full flex items-center gap-2">
                 Contact
                 <span className='bg-white text-black rounded-full p-[1px] '><GoArrowDownRight/></span>

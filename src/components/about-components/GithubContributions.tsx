@@ -75,6 +75,8 @@ const GitHubContributions: React.FC<Props> = ({}) => {
     return "0";
   }
 
+
+
   return <AnimatedCounter from={contributions - 100} to={contributions} />;
 };
 

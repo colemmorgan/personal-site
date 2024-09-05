@@ -29,7 +29,6 @@ const EducationBody: React.FC = () => {
             <p className=" bg-gray-200 w-fit text-xs lg:text-sm  px-4 py-1 rounded-full">
               In Progress
             </p>
-            <img src="/icons/uf.png" alt="" className="w-8 h-8 sm:hidden" />
           </div>
         </div>
         <div className="md:w-1/2 md:pl-2">
@@ -50,7 +49,6 @@ const EducationBody: React.FC = () => {
             <p className=" bg-gray-200 w-fit text-xs lg:text-sm  px-4 py-1 rounded-full">
               In Progress
             </p>
-            <img src="/icons/uf.png" alt="" className="w-8 h-8 sm:hidden" />
           </div>
         </div>
       </div>
