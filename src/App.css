@@ -49,6 +49,11 @@ body {
   }
 }
 
+.gpu-accelerated {
+  will-change: transform, opacity;
+  transform: translateZ(100%);
+}
+
 .nav__box-shadow {
   box-shadow: rgba(0,0,0, 0.10) 0px 8px 24px;
 }

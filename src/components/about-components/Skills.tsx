@@ -32,27 +32,27 @@ const Frontend: React.FC = () => {
       </p>
       <ul className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm font-[350]">
         <p className="flex items-center gap-1.5 ">
-          <img src="/icons/react.svg" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/react.svg" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           React
         </p>
         <p className="flex items-center gap-1.5 ">
-          <img src="/icons/nextjs.svg" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/nextjs.svg" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           NextJS
         </p>
         <p className="flex items-center gap-1.5 ">
-          <img src="/icons/typescript.svg" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/typescript.svg" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           Typescript
         </p>
         <p className="flex items-center gap-1.5 ">
-          <img src="/icons/tailwind.png" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/tailwind.png" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           Tailwind CSS
         </p>
         <p className="flex items-center gap-1.5 ">
-          <img src="/icons/figma.svg" alt="" className="max-w-2 sm:max-w-2.5 lg:max-w-3.5" />
+          <img src="/icons/figma.svg" alt=""  loading="lazy" className="max-w-2 sm:max-w-2.5 lg:max-w-3.5" />
           Figma
         </p>
         <p className="flex items-center gap-1.5 font-[350] ">
-          <img src="/icons/git.png" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/git.png" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           Version Control
         </p>
       </ul>
@@ -70,27 +70,27 @@ const Backend: React.FC = () => {
       </p>
       <ul className="flex gap-3 sm:gap-4 flex-wrap text-xs sm:text-sm font-[350]">
         <p className="flex items-center gap-1.5  ">
-          <img src="/icons/fast.svg" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/fast.svg" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           Fast API
         </p>
         <p className="flex items-center gap-1.5  ">
-          <img src="/icons/psql.png" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/psql.png" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           PostgreSQL
         </p>
         <p className="flex items-center gap-1.5  ">
-          <img src="/icons/mongo.svg" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/mongo.svg" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           Mongo DB
         </p>
         <p className="flex items-center gap-1.5  ">
-          <img src="/icons/firebase.svg" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/firebase.svg" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           Firebase
         </p>
         <p className="flex items-center gap-1.5  ">
-          <img src="/icons/docker.png" alt="" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
+          <img src="/icons/docker.png" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 lg:max-w-5" />
           Docker
         </p>
         <p className="flex items-center gap-1.5  ">
-          <img src="/icons/selenium.png" alt="" className="max-w-3.5 sm:max-w-4 " />
+          <img src="/icons/selenium.png" alt=""  loading="lazy" className="max-w-3.5 sm:max-w-4 " />
           Selenium
         </p>
       </ul>
