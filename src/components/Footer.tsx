@@ -13,13 +13,19 @@ const Footer: React.FC<footerProps> = () => {
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="" className="cursor-not-allowed">Resume</a>
+            <a href="Cole-Mogan-Resume.pdf" download={"ColeMorgan-Resume.pdf"}>
+              Resume
+            </a>
           </ul>
-          <a href="#" className="text-sm sm:hidden">Home</a>
+          <a href="#" className="text-sm sm:hidden">
+            Home
+          </a>
         </div>
         <div className="mt-8 flex justify-between items-center">
-            <p className="text-xs sm:text-sm font-light">© 2024 Cole Morgan. All rights reserved.</p>
-            <img src="/favicon.svg" alt=""  className="max-w-8"/>
+          <p className="text-xs sm:text-sm font-light">
+            © 2024 Cole Morgan. All rights reserved.
+          </p>
+          <img src="/favicon.svg" alt="" className="max-w-8" />
         </div>
       </div>
     </footer>

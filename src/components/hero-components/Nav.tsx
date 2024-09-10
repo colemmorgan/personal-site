@@ -48,7 +48,13 @@ const Nav: React.FC<NavProps> = () => {
           <img src="/favicon.svg" alt="" className="max-w-9 hidden md:flex" />
         </div>
         <div className="flex gap-6 text-sm items-center h-fit w-[40%] justify-end">
-          <p className="hidden md:block cursor-not-allowed">Resume</p>
+          <a
+            className="hidden md:block"
+            href="Cole-Mogan-Resume.pdf"
+            download={"ColeMorgan-Resume.pdf"}
+          >
+            Resume
+          </a>
           <span
             className="ml-4 text-2xl cursor-pointer"
             onClick={() => setShowMenu(true)}
@@ -86,7 +92,7 @@ const Nav: React.FC<NavProps> = () => {
             </div>
             <div className="">
               <p className="text-2xl font-semibold">Cole Morgan</p>
-              <ul className="mt-4 gap-2 flex flex-col">
+              <ul className="mt-4 gap-2.5 flex flex-col">
                 <li>
                   <a href="#about" onClick={() => setShowMenu(false)}>
                     About Me
@@ -100,6 +106,16 @@ const Nav: React.FC<NavProps> = () => {
                 <li>
                   <a href="#contact" onClick={() => setShowMenu(false)}>
                     Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className=""
+                    href="Cole-Mogan-Resume.pdf"
+                    download={"ColeMorgan-Resume.pdf"}
+                    onClick={() => setShowMenu(false)}
+                  >
+                    Resume
                   </a>
                 </li>
               </ul>
@@ -135,7 +151,7 @@ const Nav: React.FC<NavProps> = () => {
         </div>
       )}
       <AnimatePresence>
-      {!isInView && scrollDirection === "up" && (
+        {!isInView && scrollDirection === "up" && (
           <motion.nav
             className="z-40 fixed left-0 right-0 px-4 md:px-8 xl:px-20"
             initial={{ top: 0, opacity: 0 }}
@@ -146,7 +162,12 @@ const Nav: React.FC<NavProps> = () => {
             <div className="bg-white w-full px-6 py-2 rounded-full flex justify-between nav__box-shadow">
               <p className="font-medium text-base sm:text-lg">Cole Morgan</p>
               <div className="flex gap-3 items-center">
-                <span className="text-2xl cursor-pointer" onClick={() => setShowMenu(true)}><IoMenu/></span>
+                <span
+                  className="text-2xl cursor-pointer"
+                  onClick={() => setShowMenu(true)}
+                >
+                  <IoMenu />
+                </span>
               </div>
             </div>
           </motion.nav>

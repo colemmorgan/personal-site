@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 type AnimatedFadeUpProps = {
@@ -7,7 +7,7 @@ type AnimatedFadeUpProps = {
 };
 
 const AnimatedFadeUp: React.FC<AnimatedFadeUpProps> = ({ children, threshold }) => {
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const amt = threshold ? threshold : 0.6
   const isInView = useInView(ref, { amount: amt, once: true });
 
