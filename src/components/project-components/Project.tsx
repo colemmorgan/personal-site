@@ -20,20 +20,13 @@ type ProjectProps = {
 const Project: React.FC<ProjectProps> = ({ project, index }) => {
   return (
     <div className="lg:w-[calc(50%-16px)] relative">
-      <div className="absolute bg-white py-1 top-3 right-3 rounded-full flex gap-3 items-center pl-4 pr-2 z-30">
-        {project.github && project.live ? (
+      <div className="absolute bg-white py-1 top-3 right-3 rounded-full flex gap-3 items-center px-2 z-30">
+        {project.live && (
           <>
-            <a
-              className="text-lg cursor-pointer"
-              href={project.github}
-              target="_blank"
-            >
-              <FaGithub />
-            </a>
             <a
               href={project.live}
               target="_blank"
-              className="bg-black text-white text-[13px] px-4 rounded-full flex items-center gap-1 py-1 cursor-pointer"
+              className="bg-black text-white text-[13px] px-4 rounded-full flex items-center gap-1 py-1 cursor-pointer pl-4"
             >
               Live{" "}
               <span className="text-base">
@@ -41,8 +34,15 @@ const Project: React.FC<ProjectProps> = ({ project, index }) => {
               </span>
             </a>
           </>
-        ) : (
-          <span className="pr-2 text-sm">Coming Soon</span>
+        )}
+        {project.github && (
+          <a
+            className="text-lg cursor-pointer"
+            href={project.github}
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
         )}
       </div>
       <AnimatedProjectReveal index={index}>

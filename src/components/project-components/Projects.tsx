@@ -39,6 +39,7 @@ const Featured: React.FC = () => {
       subtitle: "Fortnite Performance Analyzer",
       desc: "Track and analyze your gaming performance by accessing a plethora of statistics from public apis and user uploaded files. Access your information anywhere with an Express/MongoDB backend.",
       img: "/replayed-thumbnail.png",
+      github: "https://github.com/colemmorgan/replays"
     },
   ];
 
