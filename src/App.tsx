@@ -1,10 +1,10 @@
 import "./App.css";
-import About from "./components/about-components/About";
-import Projects from "./components/project-components/Projects";
-import Contact from "./components/contact-components/Contact";
+import About from "./components/about-components/Index";
+import Projects from "./components/project-components/Index";
+import Contact from "./components/contact-components/Index";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
-import Hero from "./components/hero-components/Hero";
+import Hero from "./components/hero-components/Index";
 
 function App() {
   useEffect(() => {

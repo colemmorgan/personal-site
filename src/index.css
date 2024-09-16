@@ -1,3 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sonsie+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #1c1c1c;
+  background-color: #ffffff;
+  font-family: "Inter Tight", sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+
+@font-face {
+  font-family: 'Nohemi-Bold';
+  src: url('/Nohemi-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nohemi {
+  font-family: 'Nohemi-Bold', "Inter Tight", system-ui, sans-serif;
+}
+
+
+.custom {
+  background: linear-gradient(45deg, #84ffc9,#aab2ff,#eca0ff);
+}
+
+.custom-dull {
+  background: linear-gradient(45deg, #84ffc966,#aab2ff66,#eca0ff66);
+}
+
+.custom-height {
+  height: max(100svh, 635px); 
+}
+
+@media (max-width: 640px) {
+  .custom-height {
+    height: 550px;
+  }
+}
+
+.nav__box-shadow {
+  box-shadow: rgba(0,0,0, 0.10) 0px 8px 24px;
+}
+
+.hero-button {
+  transition: all 250ms ease;
+}

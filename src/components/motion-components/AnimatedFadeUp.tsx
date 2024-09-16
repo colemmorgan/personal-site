@@ -17,7 +17,6 @@ const AnimatedFadeUp: React.FC<AnimatedFadeUpProps> = ({ children, threshold }) 
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="gpu-accelerated"
     >
       {children}
     </motion.div>

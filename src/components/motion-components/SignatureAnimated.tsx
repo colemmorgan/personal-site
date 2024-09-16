@@ -22,8 +22,7 @@ const NameAnimation: React.FC<NameAnimationProps> = ({ setAnimating }) => {
           strokeWidth="2"
           strokeOpacity="0.0"
           strokeLinecap={"round"}
-          className='gpu-accelerated'
-          initial={{ pathLength: 0, strokeOpacity: 0  }}
+          initial={{ pathLength: 0, strokeOpacity: 0 }}
           animate={{ pathLength: 1, strokeOpacity: 1 }}
           transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
         />
@@ -32,7 +31,6 @@ const NameAnimation: React.FC<NameAnimationProps> = ({ setAnimating }) => {
           stroke="#1e1e1e"
           strokeOpacity="0"
           strokeWidth="2"
-          className='gpu-accelerated'
           strokeLinecap={"round"}
           initial={{ pathLength: 0, strokeOpacity: 0 }}
           animate={{ pathLength: 1, strokeOpacity: 1 }}
@@ -44,9 +42,8 @@ const NameAnimation: React.FC<NameAnimationProps> = ({ setAnimating }) => {
           stroke="#1e1e1e"
           strokeOpacity="0.0"
           strokeWidth="2"
-          className='gpu-accelerated'
           strokeLinecap={"round"}
-          initial={{ pathLength: 0, strokeOpacity: 0  }}
+          initial={{ pathLength: 0, strokeOpacity: 0 }}
           animate={{ pathLength: 1, strokeOpacity: 1 }}
           transition={{ delay: 1.05, duration: 0.4, ease: "easeInOut" }}
         />
