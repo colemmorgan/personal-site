@@ -41,6 +41,20 @@ const Featured: React.FC = () => {
       img: "/replayed-thumbnail.png",
       github: "https://github.com/colemmorgan/replays"
     },
+    {
+      title: "UFDSC",
+      subtitle: "Google Developer Student Club Website",
+      desc: "A website created for the University of Florida Google Developer Student Club to help direct users to their discord and become members of the club.",
+      img: "/ufdsc.png",
+      github: "https://github.com/colemmorgan/ufdsc",
+      live: "https://ufdsc.org"
+    },
+    {
+      title: "Hypothetical Campus Organization",
+      subtitle: "Exploratory",
+      desc: "An exploratory project of a hypothetical club website to practice creative web design and development.",
+      img: "/ufcd.png",
+    },
   ];
 
   return (

@@ -21,28 +21,34 @@ const Project: React.FC<ProjectProps> = ({ project, index }) => {
   return (
     <div className="lg:w-[calc(50%-16px)] relative">
       <div className="absolute bg-white py-1 top-3 right-3 rounded-full flex gap-3 items-center px-2 z-30">
-        {project.live && (
+        {project.github || project.live ? (
           <>
-            <a
-              href={project.live}
-              target="_blank"
-              className="bg-black text-white text-[13px] px-4 rounded-full flex items-center gap-1 py-1 cursor-pointer pl-4"
-            >
-              Live{" "}
-              <span className="text-base">
-                <MdOutlineArrowOutward />
-              </span>
-            </a>
+            {project.live && (
+              <>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  className="bg-black text-white text-[13px] px-4 rounded-full flex items-center gap-1 py-1 cursor-pointer pl-4"
+                >
+                  Live{" "}
+                  <span className="text-base">
+                    <MdOutlineArrowOutward />
+                  </span>
+                </a>
+              </>
+            )}
+            {project.github && (
+              <a
+                className="text-lg cursor-pointer"
+                href={project.github}
+                target="_blank"
+              >
+                <FaGithub />
+              </a>
+            )}
           </>
-        )}
-        {project.github && (
-          <a
-            className="text-lg cursor-pointer"
-            href={project.github}
-            target="_blank"
-          >
-            <FaGithub />
-          </a>
+        ) : (
+          <span className="text-sm px-2">Coming Soon</span>
         )}
       </div>
       <AnimatedProjectReveal index={index}>

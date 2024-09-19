@@ -29,11 +29,13 @@ const HackathonProject: React.FC<HackathonProjectProps> = ({
           animate={isInView ? { y: 0 } : { y: "110%" }}
           transition={{ duration: 0.4, ease: "easeInOut", delay: 0.18 * index }}
         >
-          <p className="col-span-2  p-2 pl-0 flex gap-1 items-center text-sm lg:text-base">
-            {title}
+          <p className="col-span-2 flex items-center    ">
+           <a href={`${live ? live : video}`} target="_blank" className="flex gap-1 items-center text-sm lg:text-base p-2 pl-0">
+           {title}
             <span className="text-gray-400">
               <MdOutlineArrowOutward />
             </span>
+           </a>
           </p>
           <p className="col-span-9 sm:col-span-7  p-2 pr-0 sm:pr-4 lg:pr-8 xl:pr-12 text-xs lg:text-sm">
             {desc}
@@ -76,12 +78,12 @@ const HackathonProject: React.FC<HackathonProjectProps> = ({
           animate={isInView ? { y: 0 } : { y: 120}}
           transition={{ duration: 0.6, ease: "easeInOut", delay: 0.18 * index }}
         >
-          <p className=" flex items-center gap-1 text-sm">
+          <a href={`${live ? live : video}`}  className=" flex items-center gap-1 text-sm">
             {title}{" "}
             <span className="text-gray-400">
               <MdOutlineArrowOutward />
             </span>
-          </p>
+          </a>
           <p className="mt-1 text-xs">{desc}</p>
           <div className="flex gap-4 font-[350] text-xs mt-2">
             {github && (

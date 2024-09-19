@@ -1,4 +1,3 @@
-import "./App.css";
 import About from "./components/about-components/Index";
 import Projects from "./components/project-components/Index";
 import Contact from "./components/contact-components/Index";
