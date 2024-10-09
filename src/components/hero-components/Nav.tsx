@@ -39,7 +39,7 @@ const Nav: React.FC<NavProps> = () => {
           <p className="text-lg font-medium">Cole Morgan</p>
           <p className="text-xs hidden md:flex items-center gap-1">
             Student & Web-Developer{" "}
-            <span className="text-xl">git
+            <span className="text-xl">
               <FcLinux />
             </span>
           </p>
