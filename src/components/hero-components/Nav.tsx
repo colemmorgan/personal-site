@@ -39,7 +39,7 @@ const Nav: React.FC<NavProps> = () => {
           <p className="text-lg font-medium">Cole Morgan</p>
           <p className="text-xs hidden md:flex items-center gap-1">
             Student & Web-Developer{" "}
-            <span className="text-xl">
+            <span className="text-xl">git
               <FcLinux />
             </span>
           </p>
@@ -50,8 +50,8 @@ const Nav: React.FC<NavProps> = () => {
         <div className="flex gap-6 text-sm items-center h-fit w-[40%] justify-end">
           <a
             className="hidden md:block"
-            href="Cole-Mogan-Resume.pdf"
-            download={"ColeMorgan-Resume.pdf"}
+            href="Cole-Morgan-Resume.pdf"
+            download={"Cole-Morgan-Resume.pdf"}
           >
             Resume
           </a>
@@ -111,8 +111,8 @@ const Nav: React.FC<NavProps> = () => {
                 <li>
                   <a
                     className=""
-                    href="Cole-Mogan-Resume.pdf"
-                    download={"ColeMorgan-Resume.pdf"}
+                    href="Cole-Morgan-Resume.pdf"
+                    download={"Cole-Morgan-Resume.pdf"}
                     onClick={() => setShowMenu(false)}
                   >
                     Resume
