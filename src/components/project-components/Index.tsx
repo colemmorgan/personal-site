@@ -50,10 +50,12 @@ const Featured: React.FC = () => {
       live: "https://ufdsc.org"
     },
     {
-      title: "Hypothetical Campus Organization",
-      subtitle: "Exploratory",
-      desc: "An exploratory project of a hypothetical club website to practice creative web design and development.",
-      img: "/ufcd.png",
+      title: "PC Portfolio",
+      subtitle: "Interactive Portfolio",
+      desc: "A fun Windows 11 inspired portfolio site.",
+      github: "https://github.com/cool-coffee-table/pc-portfolio/settings",
+      live: "https://pc-portfolio.onrender.com/",
+      img: "/pc-port.jpg",
     },
   ];
 
