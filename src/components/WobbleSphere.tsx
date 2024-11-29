@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef, useEffect, useState, useMemo } from "react";
+import React, { useRef, useEffect, useState, useMemo, Suspense } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame, extend } from "@react-three/fiber";
 import CustomShaderMaterial from "three-custom-shader-material/vanilla";
@@ -81,7 +81,7 @@ const useScale = () => {
 };
 
 const createGeometryAndUniforms = () => {
-  const geometry = new IcosahedronGeometry(2.5, 50);
+  const geometry = new IcosahedronGeometry(2.5, 40);
   const mergedGeometry = mergeVertices(geometry);
   mergedGeometry.computeTangents();
 
@@ -135,7 +135,9 @@ const Scene: React.FC<SceneProps> = React.memo(({ animating }) => (
     <Canvas shadows camera={{ position: [13, -3, -5], fov: 35 }}>
       <ambientLight intensity={0.6} />
       <Lights />
-      <Wobble />
+      <Suspense fallback={<div></div>}>
+        <Wobble />
+      </Suspense>
     </Canvas>
   </motion.div>
 ));
